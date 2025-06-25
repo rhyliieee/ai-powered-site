@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base theme configuration */
+@layer base {
+  :root {
+    /* Light theme variables */
+    --color-bg: #F8F0FB;
+    --color-bg-alt: #F3E8F7;
+    --color-surface: #FFFFFF;
+    --color-surface-elevated: #FEFCFF;
+    --color-primary: #6320EE;
+    --color-primary-hover: #8075FF;
+    --color-secondary: #8075FF;
+    --color-secondary-hover: #6320EE;
+    --color-tertiary: #B8A9FF;
+    --color-text: #2A1F2E;
+    --color-text-secondary: #4A3B52;
+    --color-text-muted: #6B5B73;
+    --color-border: #E8D9F0;
+    --color-border-soft: #F0E6F5;
+    
+    /* Radix UI variables
+    --radius: 0.5rem;
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%; */
+
+    /* Map Radix UI / shadcn/ui variables to your custom theme variables */
+    --background: var(--color-bg);
+    --foreground: var(--color-text);
+    --card: var(--color-surface);
+    --card-foreground: var(--color-text);
+    --popover: var(--color-surface);
+    --popover-foreground: var(--color-text);
+    --primary: var(--color-primary);
+    --primary-foreground: var(--color-bg); /* Text color on primary background */
+    --secondary: var(--color-secondary);
+    --secondary-foreground: var(--color-text);
+    --muted: var(--color-text-muted);
+    --muted-foreground: var(--color-text-secondary);
+    --accent: var(--color-primary-hover); /* Or another accent color from your palette */
+    --accent-foreground: var(--color-bg);
+    --destructive: 0 84.2% 60.2%; /* Keeping default red for destructive actions */
+    --destructive-foreground: 210 40% 98%;
+    --border: var(--color-border);
+    --input: var(--color-border);
+    --ring: var(--color-primary); /* Focus ring color */
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Dark theme variables */
+    --color-bg: #211A1D;
+    --color-bg-alt: #2D1F24;
+    --color-surface: #342831;
+    --color-surface-elevated: #3F313A;
+    --color-primary: #8075FF;
+    --color-primary-hover: #6320EE;
+    --color-secondary: #6320EE;
+    --color-secondary-hover: #8075FF;
+    --color-tertiary: #A691FF;
+    --color-text: #F8F0FB;
+    --color-text-secondary: #D4C4E0;
+    --color-text-muted: #B8A4C8;
+    --color-border: #4A3B52;
+    --color-border-soft: #3D2F42;
+    
+    /* Radix UI dark theme variables */
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+/* Ensure html and body have sufficient height for h-full to work */
+html, body, #__next { /* #__next for Next.js apps, adjust if not Next.js */
+  height: 100%;
+}
+body {
+  min-height: 100vh;
+}
+
+/* Utility classes */
+@layer utilities {
+  .bg-app {
+    background-color: var(--color-bg);
+  }
+  .bg-surface {
+    background-color: var(--color-surface);
+  }
+  .bg-surface-elevated {
+    background-color: var(--color-surface-elevated);
+  }
+  .text-app {
+    color: var(--color-bg);
+  }
+  .text-main {
+    color: var(--color-text);
+  }
+  .text-secondary {
+    color: var(--color-text-secondary);
+  }
+  .text-muted {
+    color: var(--color-text-muted);
+  }
+  .border-main {
+    border-color: var(--color-border);
+  }
+  .border-soft {
+    border-color: var(--color-border-soft);
+  }
+}

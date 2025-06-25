@@ -1,0 +1,30 @@
+# API Modules
+fastapi>=0.115.11
+uvicorn
+
+# LLM Modules
+langchain>=0.3.23
+langchain-core>=0.3.61
+langchain-community>=0.3.23
+langchain-google-genai>=2.1.3
+langgraph>=0.4.5
+langchain_mistralai
+
+# External Service Modules
+google-auth>=2.40.1
+google-auth-oauthlib>=1.2.2
+google-auth-httplib2>=0.2.0
+google-api-python-client>=2.170.0
+
+# Data modules
+groundx>=2.3.0
+pypdf>=5.4.0
+
+# Utility modules
+python-dotenv
+python-dateutil
+pydantic
+fastmcp>=2.5.1
+asyncio
+ag-ui-protocol
+copilotkit
